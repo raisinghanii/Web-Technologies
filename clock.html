@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Clock</title>
+</head>
+
+<style>
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #09210d;
+}
+.clock{
+    width:450px;
+    height: 450px;
+    display:flex;
+    justify-content:center;
+    align-items:center; 
+    background: url('https://i.ibb.co/QdksjZc/clock.png');
+    background-size:cover;
+}
+
+.clock:before
+{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    border-radius: 50%;
+    z-index: 10000;
+}
+
+.clock .hour,
+.clock .min,
+.clock .sec
+{
+    position: absolute;
+}
+
+.clock .hour, .hr
+{
+    width : 220px;
+    height : 220px;
+}
+
+.clock .min, .mn
+{
+    width : 270px;
+    height : 270px;
+}
+
+.clock .sec, .sc
+{
+    width : 300px;
+    height : 300px;
+}
+
+.hr, .mn, .sc
+{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+}
+
+.hr:before
+{
+    content: '';
+    position: absolute;
+    width : 8px;
+    height: 110px;
+    background: #ff105e;
+    z-index: 10;
+    border-radius: 6px 6px 0 0;
+}
+
+
+.mn:before
+{
+    content: '';
+    position: absolute;
+    width : 4px;
+    height: 135px;
+    background: #fff;
+    z-index: 11;
+    border-radius: 6px 6px 0 0;
+}
+
+.sc:before
+{
+    content: '';
+    position: absolute;
+    width : 2px;
+    height: 185px;
+    background: #fff;
+    z-index: 12;
+    border-radius: 6px 6px 0 0;
+}
+</style>
+
+
+
+<body>
+    <div class="clock">
+        <div class="hour">
+            <div class="hr" id="hr"></div>
+        </div>
+
+        <div class="min">
+            <div class="mn" id="mn"></div>
+        </div>
+
+        <div class="sec">
+            <div class="sc" id="sc"></div>
+        </div>
+    </div>
+    <script>
+    
+        const deg = 6;
+        const hr = document.getElementById("hr");
+        const mn = document.getElementById("mn");
+        const sc = document.getElementById("sc");
+    
+        setInterval(() => {
+        let day = new Date();
+        let hh = day.getHours() * 30;
+        let mm = day.getMinutes() * deg;
+        let ss = day.getSeconds() * deg;
+    
+        hr.style.transform = `rotateZ(${hh+(mm/12)}deg)`;
+        mn.style.transform = `rotateZ(${mm}deg)`;
+        sc.style.transform = `rotateZ(${ss}deg)`;
+
+        })
+        
+    </script>
+</body>
+</html>
