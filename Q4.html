@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<form action="/action_page.php">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="name" onblur="myFunction1()"><br><br>
+
+  <label for="lname">Middle Name:</label><br>
+  <input type="text" id="mname" name="name" onblur="myFunction2()"><br><br>
+
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="name" onblur="myFunction3()"><br><br>
+
+  <label for="lname">Age:</label><br>
+  <input type="text" id="age" name="age"><br><br>
+
+  <label>Gender:</label><br>
+  <input type="radio" id="male" name="gender" value="male">
+  <label for="male">Male</label><br>
+  <input type="radio" id="female" name="gender" value="female">
+  <label for="female">Female</label><br><br>
+  
+</form> 
+<button onclick="f()">Submit</button>
+<br><br>
+<a href="Q5.html">Proceed to next page</a>
+
+
+<script>
+function myFunction1() {
+  var x = document.getElementById("fname");
+  x.value = x.value.toUpperCase();
+}
+function myFunction2() {
+  var x = document.getElementById("mname");
+  x.value = x.value.toUpperCase();
+}
+function myFunction3() {
+  var x = document.getElementById("lname");
+  x.value = x.value.toUpperCase();
+}
+function f() {
+	alert("Data Submitted")
+}
+</script>
+
+</body>
+</html>
