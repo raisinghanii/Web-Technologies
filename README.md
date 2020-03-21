@@ -1,5 +1,5 @@
 # Web-Technologies
 
-Clock hosted at: yogeshr1.000webhostapp.com
+Clock hosted at: [Clock](yogeshr1.000webhostapp.com)
 
-Assignment hosted at : yogeshwt.000webhostapp.com
+Assignment hosted at : [Assignment](yogeshwt.000webhostapp.com)
