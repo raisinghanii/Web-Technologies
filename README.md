@@ -1,6 +1,6 @@
 # Web-Technologies
 
-To see the live demo of you can visit below links : 
+To see the live demo of the assignment you can visit below links : 
 
 Clock hosted at: [Clock](https://yogeshr1.000webhostapp.com/)
 
